@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--SPG:
+
+This HTML file has been associated with a SharePoint Page Layout (.aspx file) carrying the same name.  While the files remain associated, you will not be allowed to edit the .aspx file, and any rename, move, or deletion operations will be reciprocated.
+
+To build the page layout directly from this HTML file, simply fill in the contents of content placeholders.  Use the Snippet Generator at https://<YOUR.SITE.COM>/<COLLECTION/NAME>/_layouts/15/ComponentHome.aspx?Url=??? to create and customize additional content placeholders and other useful SharePoint entities, then copy and paste them as HTML snippets into your HTML code.   All updates to this file within content placeholders will automatically sync to the associated page layout.
+
+-->
+<!-- _lcid="1033" _version="15.0.4420" _dal="1" -->
+<!-- _LocalBinding -->
+<!DOCTYPE html[]>
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <!--MS:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
+  <!--SPM:<SharePoint:ProjectProperty Property="Title" runat="server"/>-->
+  <!--CS: Start Page Field: Title Snippet-->
+  <!--SPM:<%@Register Tagprefix="PageFieldFieldValue" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+  <!--MS:<PageFieldFieldValue:FieldValue FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
+  <!--ME:</PageFieldFieldValue:FieldValue>-->
+  <!--CE: End Page Field: Title Snippet-->
+  <!--ME:</asp:ContentPlaceHolder>-->
+  <!--MS:<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server">-->
+  <!--CS: Start Edit Mode Panel Snippet-->
+  <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+  <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+  <!--MS:<Publishing:EditModePanel runat="server" id="editmodestyles">-->
+  <!--MS:<SharePoint:CssRegistration name="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/editmode15.css %&#62;" After="&#60;% $SPUrl:~sitecollection/Style Library/~language/Themable/Core Styles/pagelayouts15.css %&#62;" runat="server">-->
+  <!--ME:</SharePoint:CssRegistration>-->
+  <!--ME:</Publishing:EditModePanel>-->
+  <!--CE: End Edit Mode Panel Snippet-->
+  <link href="app/css/news-items.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+  <script>
+    System.config({
+      packages: {
+        'news-items/app': {
+          format: 'register',
+          defaultExtension: 'js'
+        },
+      },
+      map: {
+        'escape.pipe': 'shared-modules/escape.pipe.js',
+        'request.service': 'shared-modules/request.service.js'
+      }
+    });
+    System.appArray.push('news-items/app/appStart');
+  </script>
+  <script type="text/javascript" src="../node_modules/rxjs/bundles/Rx.min.js"></script>
+  <script type="text/javascript" src="../node_modules/angular2/bundles/angular2.min.js"></script>
+  <script type="text/javascript" src="../node_modules/angular2/bundles/http.min.js"></script>
+  <script type="text/javascript" src="../node_modules/angular2/bundles/router.min.js"></script>
+  <script>
+    for (var i = 0, l = System.appArray.length; i < l; i++) {
+      var file = System.appArray[i];
+      System.import(file);
+    }
+    window.twttr = (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function (f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+  <!--ME:</asp:ContentPlaceHolder>-->
+  <!--MS:<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server">-->
+  <!--ME:</asp:ContentPlaceHolder>-->
+  <!--[if gte mso 9]><xml>
+  <mso:CustomDocumentProperties>
+  <mso:ContentPlaceHolderHashPlaceHolderPageTitleInTitleArea msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderPageTitleInTitleArea>
+  <mso:ContentPlaceHolderHashPlaceHolderMain msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderMain>
+  <mso:HtmlDesignStatusAndPreview msdt:dt="string">https://<YOUR.SITE.COM>/<COLLECTION/NAME>/_catalogs/masterpage/custom/news-items/news-items.html, Conversion successful.</mso:HtmlDesignStatusAndPreview>
+  <mso:ContentTypeId msdt:dt="string">0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE8110003D357F861E29844953D5CAA1D4D8A3B</mso:ContentTypeId>
+  <mso:ContentPlaceHolderHashPlaceHolderAdditionalPageHead msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderAdditionalPageHead>
+  <mso:ContentPlaceHolderHashPlaceHolderPageTitle msdt:dt="string">1</mso:ContentPlaceHolderHashPlaceHolderPageTitle>
+  <mso:MasterHash msdt:dt="string">-2027622355</mso:MasterHash>
+  <mso:HtmlDesignFromMaster msdt:dt="string">https://<YOUR.SITE.COM>/_catalogs/masterpage/custom/custom-masterpage/custom-master.html, https://<YOUR.SITE.COM>/_catalogs/masterpage/custom/custom-masterpage/custom-master.html</mso:HtmlDesignFromMaster>
+  <mso:PublishingAssociatedContentType msdt:dt="string">;#CUSTOM List Display;#0x01010007FF3E057FA8AB4AA42FCB67B453FFC100E214EEE741181F4E9F7ACC43278EE8110003D357F861E29844953D5CAA1D4D8A3B00A026C232666AD045B3141F6BD29AF4C9;#</mso:PublishingAssociatedContentType>
+  <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
+  <mso:_dlc_DocId msdt:dt="string">CONN6DVM3NXA-1-1544</mso:_dlc_DocId>
+  <mso:_dlc_DocIdItemGuid msdt:dt="string">b57e5def-6f55-4689-aab2-64eda1bd4adb</mso:_dlc_DocIdItemGuid>
+  <mso:_dlc_DocIdUrl msdt:dt="string">https://<YOUR.SITE.COM>/_layouts/15/DocIdRedir.aspx?ID=CONN6DVM3NXA-1-1544, CONN6DVM3NXA-1-1544</mso:_dlc_DocIdUrl>
+  <mso:ContentPlaceHolderChangedPlaceHolderPageTitle msdt:dt="string">True</mso:ContentPlaceHolderChangedPlaceHolderPageTitle>
+  <mso:ContentPlaceHolderChangedPlaceHolderMain msdt:dt="string">True</mso:ContentPlaceHolderChangedPlaceHolderMain>
+  <mso:ContentPlaceHolderChangedPlaceHolderAdditionalPageHead msdt:dt="string">True</mso:ContentPlaceHolderChangedPlaceHolderAdditionalPageHead>
+  <mso:ContentPlaceHolderHashPlaceHolderBodyAreaClass msdt:dt="string">268219038</mso:ContentPlaceHolderHashPlaceHolderBodyAreaClass>
+  <mso:ContentPlaceHolderHashPlaceHolderTopNavBar msdt:dt="string">1460141016</mso:ContentPlaceHolderHashPlaceHolderTopNavBar>
+  <mso:ContentPlaceHolderChangedPlaceHolderPageTitleInTitleArea msdt:dt="string">True</mso:ContentPlaceHolderChangedPlaceHolderPageTitleInTitleArea>
+  <mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
+  <mso:PublishingPreviewImage msdt:dt="string"></mso:PublishingPreviewImage>
+  <mso:HtmlDesignPreviewUrl msdt:dt="string"></mso:HtmlDesignPreviewUrl>
+  <mso:MasterPageDescription msdt:dt="string"></mso:MasterPageDescription>
+  <mso:PublishingAssociatedVariations msdt:dt="string"></mso:PublishingAssociatedVariations>
+  <mso:PublishingHidden msdt:dt="string">0</mso:PublishingHidden>
+  </mso:CustomDocumentProperties>
+  </xml><![endif]-->
+  <title>news-items-ts</title>
+</head>
+<body>
+  <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderTopNavBar" runat="server">-->
+  <!--MS:<SharePoint:AspMenu runat="server" UseSeparateCss="false" AdjustForShowStartingNode="True" StaticDisplayLevels="2" AccessKey="1" SkipLinkText="" CssClass="nav-list" EnableViewState="False" MaximumDynamicDisplayLevels="2" UseSimpleRendering="True" DataSourceID="topSiteMap" Orientation="Horizontal" RenderingMode="Default" ID="TopNavigationMenu">-->
+  <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+  <!--ME:</SharePoint:AspMenu>-->
+  <!--ME:</asp:ContentPlaceHolder>-->
+  <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderPageTitleInTitleArea" runat="server">-->
+  <!--CS: Start Page Field: Title Snippet-->
+  <!--SPM:<%@Register Tagprefix="PageFieldFieldValue" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+  <!--MS:<PageFieldFieldValue:FieldValue FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
+  <!--ME:</PageFieldFieldValue:FieldValue>-->
+  <!--CE: End Page Field: Title Snippet-->
+  <!--ME:</asp:ContentPlaceHolder>-->
+  <!--MS:<asp:ContentPlaceHolder ID="PlaceHolderMain" runat="server">-->
+  <div id="title-area">
+    <!--CS: Start Page Field: Title Snippet-->
+    <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+    <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel">-->
+    <!--MS:<PageFieldTextField:TextField FieldName="fa564e0f-0c70-4ab9-b863-0177e6ddd247" runat="server">-->
+    <!--ME:</PageFieldTextField:TextField>-->
+    <!--ME:</Publishing:EditModePanel>-->
+    <!--CE: End Page Field: Title Snippet-->
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-9" id="news-zone">
+        <!-- SHOW IN EDIT MODE -->
+        <div id="edit-container" data-name="EditModePanelShowInEdit">
+          <!--CS: Start Edit Mode Panel Snippet-->
+          <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+          <!--MS:<Publishing:EditModePanel runat="server" CssClass="edit-mode-panel" layout="row" flex="85" layout-wrap="">-->
+          <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+          <div ng-form="listSelector">
+
+            <div class="col-md-6">
+              <div data-name="Page Field: Site URL">
+                <!--CS: Start Page Field: Site URL Snippet-->
+                <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<PageFieldTextField:TextField FieldName="c50f5d23-50f5-4cb1-82a7-b59b91d8b60e" runat="server">-->
+                <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div align="left" class="ms-formfieldcontainer"><div class="ms-formfieldlabelcontainer" nowrap="nowrap"><span class="ms-formfieldlabel" nowrap="nowrap">Site URL</span></div><div class="ms-formfieldvaluecontainer">Site URL field value.</div></div><!--PE: End of READ-ONLY PREVIEW-->
+                <!--ME:</PageFieldTextField:TextField>-->
+                <!--CE: End Page Field: Site URL Snippet-->
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div data-name="Page Field: List Name">
+                <!--CS: Start Page Field: List Name Snippet-->
+                <!--SPM:<%@Register Tagprefix="PageFieldTextField" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+                <!--MS:<PageFieldTextField:TextField FieldName="c0286c92-1e05-446c-9e77-ea65f6fb4980" runat="server">-->
+                <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div align="left" class="ms-formfieldcontainer"><div class="ms-formfieldlabelcontainer" nowrap="nowrap"><span class="ms-formfieldlabel" nowrap="nowrap">List Name</span></div><div class="ms-formfieldvaluecontainer">List Name field value.</div></div><!--PE: End of READ-ONLY PREVIEW-->
+                <!--ME:</PageFieldTextField:TextField>-->
+                <!--CE: End Page Field: List Name Snippet-->
+              </div>
+            </div>
+            <edit-list-view></edit-list-view>
+          </div>
+          <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+          <!--ME:</Publishing:EditModePanel>-->
+          <!--CE: End Edit Mode Panel Snippet-->
+        </div>
+        <!-- END EDIT MODE -->
+        <!-- SHOW IN DISPLAY MODE -->
+        <div data-name="EditModePanelShowInRead">
+          <!--CS: Start Edit Mode Panel Snippet-->
+          <!--SPM:<%@Register Tagprefix="Publishing" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+          <!--MS:<Publishing:EditModePanel runat="server" PageDisplayMode="Display">-->
+          <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+          <display-news></display-news>
+          <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><!--PE: End of READ-ONLY PREVIEW-->
+          <!--ME:</Publishing:EditModePanel>-->
+          <!--CE: End Edit Mode Panel Snippet-->
+        </div>
+        <!-- END DISPLAY -->
+      </div>
+      <div class="col-md-3" id="news-sidebar">
+        <div id="static-page-content">
+
+          <div class="highlight-content-area">
+            <!--CS: Start Page Field: Page Content Snippet-->
+            <!--SPM:<%@Register Tagprefix="PageFieldRichHtmlField" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
+            <!--MS:<PageFieldRichHtmlField:RichHtmlField FieldName="f55c4d88-1f2e-4ad9-aaa8-819af4ee7ee8" runat="server">-->
+            <!--PS: Start of READ-ONLY PREVIEW (do not modify)--><div id="ctl02_label" style="display:none">Page Content</div><div id="ctl02__ControlWrapper_RichHtmlField" class="ms-rtestate-field" style="display:inline" aria-labelledby="ctl02_label"><div align="left" class="ms-formfieldcontainer"><div class="ms-formfieldlabelcontainer" nowrap="nowrap"><span class="ms-formfieldlabel" nowrap="nowrap">Page Content</span></div><div class="ms-formfieldvaluecontainer"><div class="ms-rtestate-field">Page Content field value. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div></div></div></div><!--PE: End of READ-ONLY PREVIEW-->
+            <!--ME:</PageFieldRichHtmlField:RichHtmlField>-->
+            <!--CE: End Page Field: Page Content Snippet-->
+          </div>
+          <div class="MY-tweets">
+            <a class="twitter-timeline" href="https://twitter.com/USERNAME" data-widget-id="690648601987543040" data-chrome="nofooter" height="300">Tweets by @USERNAME</a>            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--ME:</asp:ContentPlaceHolder>-->
+</body>
+</html>

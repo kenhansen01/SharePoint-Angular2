@@ -1,0 +1,106 @@
+﻿/************************ News Items ****************************/
+
+#s4-workspace { background-color: #f1f1f1 }
+
+.channels {
+  position: fixed;
+  top: 160px;
+  left: 3%;
+  width: 19%;
+  max-height: 70%;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+  overflow-y: scroll;
+}
+
+.channels .channel-item {
+  display: block;
+  background-color: #fff;
+  height: 58px;
+  line-height: 26px;
+  padding: 16px;
+  padding-left: 32px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.channels .channel-item.is-selected {
+  background-color: #E2E2E2;
+  border-left: 4px solid #3498DB;
+  font-weight: 700
+}
+
+.channels .channel-item:hover { 
+  background-color: #e2e2e2;
+  cursor: pointer;
+}
+
+.news-item-container {
+  margin-bottom: 32px;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+  background-color: #fff;
+}
+
+.news-item-container:hover { cursor: pointer }
+
+.news-item-image, .news-item-image > div > img {
+  position: relative;
+}
+
+.news-item-image > div > img {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.news-item-image-overlay {
+  position: absolute;
+  top: 60%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: -moz-linear-gradient(top, transparent 0%, rgba(0,0,0,0.85) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, rgba(0,0,0,0.85)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.85) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(0,0,0,0.85) 100%);
+  background: -ms-linear-gradient(top, transparent 0%, rgba(0,0,0,0.85) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.85) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+}
+
+.news-item-image > h2 {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+  color: #fff;
+}
+
+.news-item-headline {
+  padding: 1%;
+  font-size: 1em;
+}
+
+.news-item-detail .modal-content { border-radius: 0 }
+
+.news-item-detail .modal-content button.close { min-width: 0 }
+
+.news-item-detail .modal-content .modal-body { padding: 0 }
+
+.modal-news-content {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+.modal-news-content h1, .news-item-article {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.modal-news-content h1 { text-align: center }
+
+.news-item-detail .modal-footer { text-align: center }
+
+/************************ End News Items ************************/

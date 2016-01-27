@@ -1,0 +1,92 @@
+﻿#ms-designer-ribbon,
+#ms-designer-ribbon *,
+[class*=ms-] {
+	-webkit-box-sizing: content-box;
+	   -moz-box-sizing: content-box;
+	        box-sizing: content-box;
+}
+
+body { position: absolute; }
+
+/* SharePoint Left Control Menu - add padding to account for logo */
+.ms-cui-tts, .ms-cui-tts-scale-1, .ms-cui-tts-scale-2 {
+    padding: 0 0 0 7.5% !important;
+}
+
+/*************************************************************
+ * Nav-Bar styles for logo text and first level
+ * Flyout styles are handled by nav-flyout module
+ *************************************************************/
+
+#top-bar {
+    overflow: visible;
+}
+
+.navbar { margin-bottom: 0 }
+.navbar-brand { padding: 0 }
+
+.nav-container {
+    height: 100%;
+    border-bottom: thin #538C3F solid;
+}
+
+#team-logo {
+    position: absolute;
+    float: left;
+    margin-left: 2.5%;
+    margin-top: -1.70%;
+    height: 105px;
+    z-index: 150; 
+}
+
+.nav-list {
+    position: relative;
+    padding-top: 1.5em;
+    padding-left: 6em;
+}
+
+.nav-search {
+    float: right;
+    margin-top: 1em;
+}
+
+.ms-srch-sb>input {
+    height: 1.5em;
+    font-size: 1.1em;
+    width: 150px;
+}
+
+.ms-srch-sb-navLink, .ms-srch-sb-searchLink {
+    vertical-align: middle;
+}
+
+.nav-list ul {
+    list-style: none;
+}
+
+.nav-list ul.dynamic {
+    background-color: #D3D3D3;
+    box-shadow: none;
+    padding: 0 0 2px 0;
+
+}
+.nav-list ul.dynamic li.dynamic a {
+    margin: 0 6px;
+    color: #000;
+}
+
+.nav-list ul.dynamic li.dynamic:hover {
+    background-color: #C2DA9C;
+}
+
+.nav-list ul.dynamic ul.dynamic {
+    background-color: #EFEFEF;
+    white-space: nowrap;
+}
+
+.nav-list li.dynamic {
+    padding: 6px 0;
+    border-top: thin #fff solid;
+}
+
+#s4-bodyContainer { margin-top: 1.8em }
