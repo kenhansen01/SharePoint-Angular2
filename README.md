@@ -8,8 +8,13 @@ npm install -g typescript@next
 ```
 
 ### What you get from this
+<<<<<<< HEAD
 A Master page with a fixed navigation menu at the top of the page. This also styles the nav dropdowns so the 3rd level is height matched to the 2nd based on which is tallest.
  
+=======
+A Master page with a fixed navigation menu at the top of the page. This also styles the nav dropdowns so the 3rd level is height matched to the 2nd based on which is tallest. 
+
+>>>>>>> 01af551a9bbc566d1acc585a374afd5dcac2f0a8
 ![Navigation Styles](navImage.JPG)
 
 The master page also registers all of the Angular2 scripts and initializes SystemJS to start configuring and loading files.
