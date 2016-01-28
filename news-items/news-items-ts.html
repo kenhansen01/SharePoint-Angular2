@@ -29,30 +29,20 @@ To build the page layout directly from this HTML file, simply fill in the conten
   <!--ME:</Publishing:EditModePanel>-->
   <!--CE: End Edit Mode Panel Snippet-->
   <link href="app/css/news-items.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
+  <!--SPM:<SharePoint:ScriptLink language="javascript"      name="~sitecollection/_catalogs/masterpage/dbs-custom/news-items/app/news.system.config.js" OnDemand="true" runat="server" Localizable="false" />-->
   <script>
-    System.config({
-      packages: {
-        'news-items/app': {
-          format: 'register',
-          defaultExtension: 'js'
-        },
-      },
-      map: {
-        'escape.pipe': 'shared-modules/escape.pipe.js',
-        'request.service': 'shared-modules/request.service.js'
+    RegisterSodDep('~sitecollection/_catalogs/masterpage/dbs-custom/news-items/app/news.system.config.js', '~sitecollection/_catalogs/masterpage/dbs-custom/custom-masterpage/app/master.system.config.js');
+    RegisterSodDep('~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/rxjs/bundles/Rx.min.js', '~sitecollection/_catalogs/masterpage/dbs-custom/news-items/app/news.system.config.js');
+    RegisterSodDep('~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/angular2.min.js', '~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/rxjs/bundles/Rx.min.js');
+    RegisterSodDep('~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/http.min.js', '~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/angular2.min.js');
+    RegisterSodDep('~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/router.min.js', '~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/http.min.js');
+    EnsureScriptFunc('~sitecollection/_catalogs/masterpage/dbs-custom/node_modules/angular2/bundles/router.min.js', null, function () {
+      for (var i = 0, l = System.appArray.length; i < l; i++) {
+        var file = System.appArray[i];
+        System.import(file);
       }
     });
-    System.appArray.push('news-items/app/appStart');
-  </script>
-  <script type="text/javascript" src="../node_modules/rxjs/bundles/Rx.min.js"></script>
-  <script type="text/javascript" src="../node_modules/angular2/bundles/angular2.min.js"></script>
-  <script type="text/javascript" src="../node_modules/angular2/bundles/http.min.js"></script>
-  <script type="text/javascript" src="../node_modules/angular2/bundles/router.min.js"></script>
-  <script>
-    for (var i = 0, l = System.appArray.length; i < l; i++) {
-      var file = System.appArray[i];
-      System.import(file);
-    }
+
     window.twttr = (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0],
         t = window.twttr || {};

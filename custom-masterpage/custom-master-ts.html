@@ -38,29 +38,27 @@ To build the master page directly from this HTML file, simply edit the page as y
         <!--SPM:<SharePoint:ScriptLink language="javascript" name="suitelinks.js" OnDemand="true" runat="server" Localizable="false"/>-->
         <link href="../node_modules/bootstrap-sass/assets/custom-compiled/css/bootstrap-custom.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
         <link href="app/css/custom-master.css" rel="stylesheet" type="text/css" ms-design-css-conversion="no" />
-        <script type="text/javascript" src="../node_modules/es6-shim/es6-shim.min.js"></script>
-        <script type="text/javascript" src="../node_modules/systemjs/dist/system-polyfills.js"></script>
-        <script type="text/javascript" src="../node_modules/angular2/bundles/angular2-polyfills.min.js"></script> 
-        <script type="text/javascript" src="../node_modules/systemjs/dist/system.js"></script> 
-        <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script> 
-        <script type="text/javascript" src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script> 
-        <!--<script type="text/javascript" src="app/master.system.config.js"></script>-->
-        <script>
-          System.config({
-            baseURL: '<asp:Literal runat="server" Text="<% $SPUrl:~sitecollection/_catalogs/masterpage/custom %>" />',
-            //defaultExtension: 'js',
-            packages: {
-              'custom-masterpage/app': {
-                format: 'register',
-                defaultExtension: 'js'
-              }
-            },
-            map: {
-              'jquery': 'node_modules/jquery/dist/jquery.min.js'
-            }
-          });
+        <!--SPM:<SharePoint:ScriptLink language="javascript"    name="~sitecollection/_catalogs/masterpage/custom/node_modules/es6-shim/es6-shim.min.js" OnDemand="true"  runat="server" Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"    name="~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system-polyfills.js" OnDemand="true"  runat="server"  Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"    name="~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/angular2-polyfills.min.js" OnDemand="true"  runat="server"  Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"    name="~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system.js" OnDemand="true"  runat="server" Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"    name="~sitecollection/_catalogs/masterpage/custom/node_modules/rxjs/bundles/Rx.min.js" OnDemand="true"  runat="server"  Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"        name="~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/angular2.min.js" OnDemand="true"  runat="server" Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"        name="~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/http.min.js" OnDemand="true"  runat="server" Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"        name="~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/router.min.js" OnDemand="true"  runat="server" Localizable="false" />-->
+        <!--SPM:<SharePoint:ScriptLink language="javascript"      name="~sitecollection/_catalogs/masterpage/custom/custom-masterpage/app/master.system.config.js" OnDemand="true"  runat="server" Localizable="false" />-->
 
-          System.appArray = ['custom-masterpage/app/app'];
+
+        <script type="text/javascript" src="../node_modules/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="../node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script> 
+        <script>
+          RegisterSodDep('~sitecollection/_catalogs/masterpage/custom/node_modules/es6-shim/es6-shim.min.js', 'core.js');
+          RegisterSodDep('~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system-polyfills.js', '~sitecollection/_catalogs/masterpage/custom/node_modules/es6-shim/es6-shim.min.js');
+          RegisterSodDep('~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/angular2-polyfills.min.js', '~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system-polyfills.js');
+          RegisterSodDep('~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system.js', '~sitecollection/_catalogs/masterpage/custom/node_modules/angular2/bundles/angular2-polyfills.min.js');
+          RegisterSodDep('~sitecollection/_catalogs/masterpage/custom/custom-masterpage/app/master.system.config.js', '~sitecollection/_catalogs/masterpage/custom/node_modules/systemjs/dist/system.js');
+          EnsureScriptFunc('~sitecollection/_catalogs/masterpage/custom/custom-masterpage/app/master.system.config.js', null, function () { });
+
         </script>
 
 
